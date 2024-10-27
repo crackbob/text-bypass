@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poop Hack v42</title>
+    <title>Poop Hack v43</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,12 +11,9 @@
             background-color: #121212;
             color: #ffffff;
         }
-        h1 {
-            color: #B0BEC5;
-        }
         input, button, textarea {
             padding: 10px;
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
@@ -25,37 +22,24 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             width: 100%;
             max-width: 550px;
+            resize: both;
         }
         input:focus, textarea:focus, button:focus {
             outline: none; 
             box-shadow: 0 0 0 3px rgba(176, 190, 197, 0.5);
         }
-        button {
-            background-color: #B0BEC5;
-            color: #121212;
-            cursor: pointer;
-            width: auto;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #90A4AE;
-        }
         #output {
-            outline: 1px solid #B0BEC5;
-            padding: 10px;
-            margin-top: 20px; 
             font-weight: bold; 
-            background-color: #1e1e1e;
-            height: 80px;
-            overflow-y: auto;
         }
     </style>
 </head>
 <body>
-    <h1>Poop Hack v42</h1>
-    <textarea id="inputText" rows="4" placeholder="Enter text here..."></textarea><br>
-    <button onclick="convertText()">Convert Text</button>
-    <div id="output"></div>
+    <h1>Poop Hack v43</h1>
+    <br>
+    <h2>Input</h2>
+    <textarea id="inputText" placeholder="Enter text here..."></textarea><br>
+    <h2>Output</h2>
+    <textarea id="output" placeholder="Converted text will show up here"></textarea>
 
     <script>
         function bypassText(inputString) {
@@ -71,11 +55,11 @@
             return outputString;
         }
 
-        function convertText() {
+        document.getElementById("inputText").addEventListener("input", function () {
             const inputText = document.getElementById("inputText").value;
             const convertedText = bypassText(inputText);
-            document.getElementById("output").innerText = convertedText;
-        }
+            document.getElementById("output").value = convertedText;
+        });
     </script>
 </body>
 </html>
