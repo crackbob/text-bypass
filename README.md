@@ -1,2 +1,2 @@
 # text-bypass
-abcefg
+evade text filters with ease

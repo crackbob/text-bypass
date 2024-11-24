@@ -1,65 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poop Hack v43</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px; 
-            background-color: #121212;
-            color: #ffffff;
-        }
-        input, button, textarea {
-            padding: 10px;
-            margin-top: 5px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #1e1e1e;
-            color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 550px;
-            resize: both;
-        }
-        input:focus, textarea:focus, button:focus {
-            outline: none; 
-            box-shadow: 0 0 0 3px rgba(176, 190, 197, 0.5);
-        }
-        #output {
-            font-weight: bold; 
-        }
-    </style>
-</head>
-<body>
-    <h1>Poop Hack v43</h1>
-    <br>
-    <h2>Input</h2>
-    <textarea id="inputText" placeholder="Enter text here..."></textarea><br>
-    <h2>Output</h2>
-    <textarea id="output" placeholder="Converted text will show up here"></textarea>
+    <title>Text Bypass v2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <script defer src="index.js"></script>
+  
+  <body>
+    <div id="letters"></div>
+    <textarea id="textEditor"></textarea>
+    
+    <div id="settings">
+        <span>Replace on press</span>
+        <input id="replaceChars" type="checkbox" checked="checked" class="flipswitch"/>
+        <span>Case Sensitive</span>
+        <input id="caseSensitive" type="checkbox" checked="checked" class="flipswitch"/>
+        <button id="shuffle" class="button">Shuffle</button>
+    </div>
 
-    <script>
-        function bypassText(inputString) {
-            let conversionTable = { 
-                "a": "ꓮ", "b": "ꓐ", "c": "ꓚ", "d": "ꓓ", "e": "ꓰ", "f": "ꓝ",
-                "g": "ꓖ", "h": "ꓧ", "i": "ꓲ", "j": "ꓙ", "k": "ꓗ", "l": "ꓡ", 
-                "m": "ꓟ", "n": "ꓠ", "o": "ꓳ", "p": "ꓑ", "q": "Q", "r": "ꓣ", 
-                "s": "ꓢ", "t": "ꓔ", "u": "ꓴ", "v": "ꓦ", "w": "ꓪ", "x": "ꓫ", 
-                "y": "ꓬ", "z": "ꓜ" 
-            };
-            let outputString = "";
-            inputString.split("").forEach(key => outputString += conversionTable[key.toLowerCase()] || key);
-            return outputString;
-        }
-
-        document.getElementById("inputText").addEventListener("input", function () {
-            const inputText = document.getElementById("inputText").value;
-            const convertedText = bypassText(inputText);
-            document.getElementById("output").value = convertedText;
-        });
-    </script>
-</body>
+  </body>
 </html>
