@@ -18,7 +18,7 @@ async function init () {
         button.onclick = () => {
             if (replaceChars.checked) {
                 if (!caseSensitive.checked) {
-                    textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toLowerCase(), letter);
+                    textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toUpperCase(), letter);
                     textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toLowerCase(), letter);
                 } else {
                     textEditor.value = textEditor.value.replaceAll(lettersToReplace[index], letter);
@@ -33,7 +33,7 @@ async function init () {
     shuffleButton.addEventListener("click", () => {
         buttonLetters.forEach((letter, index) => {
             if (!caseSensitive.checked) {
-                textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toLowerCase(), letter);
+                textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toUpperCase(), letter);
                 textEditor.value = textEditor.value.replaceAll(lettersToReplace[index].toLowerCase(), letter);
             } else {
                 textEditor.value = textEditor.value.replaceAll(lettersToReplace[index], letter);
