@@ -11,6 +11,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 60px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.letters::-webkit-scrollbar {
+    display: none;
 }
 
 #character {
