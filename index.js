@@ -40,8 +40,6 @@ async function init () {
             }
         }); 
     })
-
-    document.body.appendChild(buttonContainer);
 }
 
 init();
