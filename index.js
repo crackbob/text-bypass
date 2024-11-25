@@ -1,6 +1,6 @@
 
 let buttonContainer = document.getElementById('letters');
-let textEditor = document.getElementById('textEditor');
+let textEditor = document.getElementById('input');
 let replaceChars = document.getElementById("replaceChars");
 let caseSensitive = document.getElementById("caseSensitive");
 let shuffleButton = document.getElementById("shuffle");

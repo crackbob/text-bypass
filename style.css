@@ -33,11 +33,11 @@
     border-radius: 0px;
 }
 
-#textEditor {
+.textEditor {
     position: fixed;
-    right: 0px;
-    top: 0px;
-    width: calc(100% - 200px);
+    right: 200px;
+    top: 0%;
+    width: calc(100% - 400px);
     height: 100%;
     font-family: "Poppins", sans-serif;
     color: white;
@@ -46,6 +46,8 @@
     box-sizing: border-box;
     font-size: 16px;
     border: none;
+    outline: none;
+    resize: none;
 }
 
 #settings {
@@ -53,7 +55,7 @@
     color: white;
     padding: 10px;
     position: fixed;
-    right: 0px;
+    right: -20px;
     top: 0px;
     width: 200px;
     height: 100%;
